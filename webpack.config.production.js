@@ -33,12 +33,16 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
-        loaders: ['babel'],
+        loaders: ['babel?stage=0'],
         include: path.join(__dirname, 'src')
       },
       {
         test: /\.less$/,
         loader: 'style!css!less'
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url?limit=25000'
       }
     ]
   }

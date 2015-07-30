@@ -29,12 +29,16 @@ module.exports = {
     loaders: [
       {
         test: /\.js?$/,
-        loaders: ['react-hot', 'babel-loader'],
+        loaders: ['react-hot', 'babel-loader?stage=0'],
         include: path.join(__dirname, 'src')
       },
       {
-        test: /\.less$/, // Only .css files
-        loader: 'style!css!less' // Run both loaders
+        test: /\.less$/,
+        loader: 'style!css!less' // Run mutliple loaders
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url?limit=25000' // Images 25KB or smaller in size will be converted to a BASE64 string
       }
     ]
   }
