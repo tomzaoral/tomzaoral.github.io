@@ -1,0 +1,34 @@
+@import '../variables.less';
+
+.footer {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid @gray-lighter;
+
+  &__copyright,
+  &__madein {
+    display: inline;
+    font-weight: 600;
+  }
+  &__copyright {
+    float: left;
+  }
+  &__code {
+    float: right;
+
+    a {
+      color: @font-color;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    i {
+      color: @brand-primary;
+      font-weight: 600;
+    }
+  }
+
+}

@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import './variables.less';
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -7,4 +8,10 @@ body {
 }
 main {
   padding-top: 30px;
+  padding-bottom: 30px;
 }
+a:hover {
+  text-decoration: none;
+}
+::-moz-selection { color: #ffffff;  background-color: @brand-primary; }
+::selection      { color: #ffffff;  background-color: @brand-primary; }

@@ -1,12 +1,59 @@
 @import '../variables.less';
 
-p {
-  font-size: 2em;
-  padding-left: 15%;
-  padding-right: 15%;
-  text-align: center;
+.about {
+  margin-bottom: 50px;
 
-  strong {
-    color: @brand-primary;
+  &__hello {
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  &__heading {
+    font-size: 28px;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  &__wrapper {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  &--last-child {
+    margin-bottom: 0;
+  }
+  &__powered {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: @font-gray;
+    text-align: center;
+  }
+}
+
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: @gray-primary;
+
+  &__heading {
+    margin-top: 0;
+  }
+  &__text {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  &__button {
+    padding: 15px 40px;
+    border-radius: 2px;
+
+    &--primary {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
   }
 }

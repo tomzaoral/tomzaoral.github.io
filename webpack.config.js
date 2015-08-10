@@ -1,5 +1,7 @@
+var prepareData = require('./prepareData');
 var webpack = require('webpack');
 var path = require('path');
+
 
 module.exports = {
   devtool: 'eval',
@@ -29,8 +31,8 @@ module.exports = {
     loaders: [
       {
         test: /\.js?$/,
-        loaders: ['react-hot', 'babel-loader?stage=0'],
-        include: path.join(__dirname, 'src')
+        exclude: /node_modules/,
+        loaders: ['react-hot', 'babel-loader?stage=0']
       },
       {
         test: /\.less$/,
@@ -39,6 +41,14 @@ module.exports = {
       {
         test: /\.(png|jpg)$/,
         loader: 'url?limit=25000' // Images 25KB or smaller in size will be converted to a BASE64 string
+      },
+      {
+        test: /\.md$/,
+        loader: "html!markdown-highlight"
+      },
+      {
+        test: /\.json$/,
+        loader: "json-loader"
       }
     ]
   }

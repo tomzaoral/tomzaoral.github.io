@@ -5,6 +5,7 @@ import HashHistory from 'react-router/lib/HashHistory';
 import Layout from './components/Layout/Layout';
 import Blog from './components/Blog/Blog';
 import Portfolio from './components/Portfolio/Portfolio';
+import Post from './components/Post/Post';
 
 const history = process.env.NODE_ENV === 'production' ?
   new HashHistory() :
@@ -15,6 +16,8 @@ export default (
     <Route path="/" component={Layout}>
       <Route path="portfolio" component={Portfolio} />
       <Route path="blog" component={Blog} />
+      <Route path="blog/:title" component={Post} />
+            
       <Redirect from="/:anything" to="/" />
     </Route>
   </Router>

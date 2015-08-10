@@ -1,0 +1,49 @@
+@import '../variables.less';
+
+.post {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &__header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid @gray-lighter;
+  }
+  &__date {
+    float: right;
+    margin-left: 20px;
+    color: @font-gray;
+  }
+  &__content {
+    padding-top: 20px;
+
+    p {
+      margin: 0 0 20px;
+      font-size: 18px;
+      line-height: 1.5;
+      letter-spacing: .01rem;
+    }
+    code {
+      font-size: 18px;
+      color: @font-color;
+      background-color: @gray-primary;
+    }
+    pre {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background-color: @gray-primary;
+      border: none;
+
+      code {
+        font-size: 18px;
+        line-height: 1.5;
+        background-color: @gray-primary;
+      }
+    }
+  }
+  &__share {
+    margin-bottom: 50px;
+  }
+
+}

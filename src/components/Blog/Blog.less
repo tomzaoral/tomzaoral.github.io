@@ -1,0 +1,30 @@
+@import '../variables.less';
+
+.blog {
+  &__heading {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid @gray-lighter;
+  }
+  &__post {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-bottom: 1px solid @gray-lighter;
+
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__link {
+    font-size: 20px;
+  }
+  &__date {
+    font-size: 14px;
+    color: @font-gray;
+  }
+}

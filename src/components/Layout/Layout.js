@@ -3,6 +3,7 @@ import { Router, Route, Link } from 'react-router';
 import { history } from 'react-router/lib/HashHistory';
 import Header from '../Header/Header';
 import About from '../About/About';
+import Footer from '../Footer/Footer';
 
 export default class Layout extends Component {
   constructor(props) {
@@ -16,9 +17,9 @@ export default class Layout extends Component {
         <Header />
 
         {/* this will be either <Home> or <About> */}
-        <div className="container">
-          {this.props.children || <About />}
-        </div>
+        {this.props.children || <About />}
+
+        <Footer />
       </div>
     )
   }

@@ -1,8 +1,13 @@
+@import '../variables.less';
+
 .header {
+  position: relative;
   width: 100%;
+  height: 300px;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #F5F6F5;
+  z-index: 9999;
+  background-color: @gray-primary;
 }
 
 .profile {
@@ -12,11 +17,11 @@
     border-radius: 200px;
   }
   &__name {
-    font-size: 2em;
+    font-size: 22px;
     font-weight: 600;
   }
   &__description {
-    font-size: 1em;
+    font-size: 14px;
   }
   &__wrapper {
     position: relative;
@@ -45,20 +50,82 @@
   list-style-type: none;
   text-align: center;
 
-  &-link {
-    margin: 0 auto;
+  &__link {
     display: inline;
+    margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
+    font-size: 18px;
     font-weight: 600;
     border-right: 1px solid #ccc;
 
     &:last-child {
         border-right: 0
     }
+  }
+}
 
-    a {
-      text-decoration: none;
+.sticky > div {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: @gray-primary;
+  border-bottom: 1px solid @gray-lighter;
+
+  .profile {
+    position: absolute;
+    top: 15px;
+
+    &__wrapper {
+      display: inline-block;
+      width: 50px;
+    }
+    &__photo {
+      display: inline;
+      width: 32px;
+      height: 32px;
+    }
+
+    &__description,
+    &__social {
+      display: none;
+    }
+
+    &__name {
+      display: inline;
+      font-size: 1em;
+    }
+  }
+
+  .menu {
+    display: inline;
+    margin: 0 auto;
+  }
+
+  .nav {
+    position: relative;
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .sticky > div {
+    height: 100px;
+
+    .profile {
+      position: relative;
+    }
+  }
+
+  .header {
+    height: 270px;
+  }
+
+  .profile {
+    &__description {
+      display: none;
     }
   }
 }

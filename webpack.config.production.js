@@ -1,3 +1,4 @@
+var prepareData = require('./prepareData');
 var path = require('path');
 var webpack = require('webpack');
 
@@ -9,7 +10,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/dist/'
   },
 
   resolve: {
@@ -33,8 +34,8 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
-        loaders: ['babel?stage=0'],
-        include: path.join(__dirname, 'src')
+        exclude: /node_modules/,
+        loaders: ['babel?stage=0']
       },
       {
         test: /\.less$/,
@@ -43,6 +44,14 @@ module.exports = {
       {
         test: /\.(png|jpg)$/,
         loader: 'url?limit=25000'
+      },
+      {
+        test: /\.md$/,
+        loader: "html!markdown-highlight"
+      },
+      {
+        test: /\.json$/,
+        loader: "json-loader"
       }
     ]
   }
