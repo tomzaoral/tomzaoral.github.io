@@ -16,6 +16,16 @@ export default class Portfolio extends Component {
             <h1 className="portfolio__heading">Portfolio</h1>
             <p className="portfolio__subheading">A selection of the most recent projects I’ve been working on as a freelancer.</p>
 
+						<div className="row portfolio__item">
+              <div className="col-lg-5">
+                <h2 className="portfolio__title">Axiory Tools</h2>
+                <p className="portfolio__content">
+                  A financial tool that helps you check current market prices, calculate position details, make currency conversions and access to account opening.
+                </p>
+                <a className="btn portfolio__btn portfolio__btn--ghost" href="https://itunes.apple.com/us/app/axiory-tools/id1089335244?mt=8" target="_blank">Try it</a>
+              </div>
+            </div>
+
             <div className="row portfolio__item">
               <div className="col-lg-5">
                 <h2 className="portfolio__title">Emily-móda boutique</h2>

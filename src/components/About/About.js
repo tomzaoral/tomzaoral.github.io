@@ -24,7 +24,7 @@ export default class About extends Component {
           <div className="container">
 
             <p className="about__hello">
-              Hi there, I'm Tom. I am an enthusiastic <strong>web developer</strong> from the Czech Republic.
+              Hi there, I'm Tom. I am an enthusiastic <strong>Javascript developer</strong> from Czech Republic.
               I <a href="https://twitter.com/tomzaoral" target="_blank">tweet</a> and <a href="https://github.com/tomzaoral" target="_blank">share code</a> about latest web technologies.
             </p>
 
@@ -69,8 +69,8 @@ export default class About extends Component {
           <div className="container">
             <h1 className="contact__heading">Let's talk</h1>
             <p className="contact__text">
-              Do you have some interesting project? I'm always up for new challenge,
-              just drop me a message.
+              Do you have some interesting project? <span className='contact__text--strike'>I'm always up for new challenge,
+              just drop me a message</span> I'm very busy but stil you can drop me a message 🐸
             </p>
             <a href="mailto:zaoraltomas@outlook.com?subject=Hello there!" className="contact__button contact__button--primary btn btn-primary">Say hello</a>
           </div>

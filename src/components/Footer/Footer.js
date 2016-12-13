@@ -8,7 +8,7 @@ export default class Footer extends Component {
       <footer className="footer">
         <div className="container">
           <div className="footer__copyright">
-            <Fa class="copyright" /> 2015 Tomas Zaoral
+            <Fa class="copyright" /> {new Date().getFullYear()} Tomas Zaoral
           </div>
           <div className="footer__code">
             <a href="https://github.com/tomzaoral/tomzaoral.github.io" target="_blank"><Fa class="code" /> with <Fa class="heart" /> in Czech Republic</a>

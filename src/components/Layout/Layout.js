@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Router, Route, Link } from 'react-router';
-import { history } from 'react-router/lib/HashHistory';
 import Header from '../Header/Header';
 import About from '../About/About';
 import Footer from '../Footer/Footer';

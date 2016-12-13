@@ -57,14 +57,14 @@ export default class Header extends Component {
                 </ul>
               </div>
               <h1 className="profile__name">Tomas Zaoral</h1>
-              <p className="profile__description">Web developer and programmer with passion for modern technologies</p>
+              <p className="profile__description">Javacript developer with passion for modern technologies</p>
             </div>
 
             <nav className="nav">
               <ul className="menu">
                 <li className="menu__link"><Link to="/">About</Link></li>
                 <li className="menu__link"><Link to="/portfolio">Portfolio</Link></li>
-                <li className="menu__link"><Link to="/blog">Blog</Link></li>
+                {/* <li className="menu__link"><Link to="/blog">Blog</Link></li> */}
               </ul>
             </nav>
           </div>
