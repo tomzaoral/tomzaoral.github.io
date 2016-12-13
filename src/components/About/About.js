@@ -70,7 +70,7 @@ export default class About extends Component {
             <h1 className="contact__heading">Let's talk</h1>
             <p className="contact__text">
               Do you have some interesting project? <span className='contact__text--strike'>I'm always up for new challenge,
-              just drop me a message</span> I'm very busy but stil you can drop me a message 🐸
+              just drop me a message</span> I'm very busy but still you can drop me a message 🐸
             </p>
             <a href="mailto:zaoraltomas@outlook.com?subject=Hello there!" className="contact__button contact__button--primary btn btn-primary">Say hello</a>
           </div>
